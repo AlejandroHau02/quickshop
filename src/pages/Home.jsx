@@ -1,10 +1,18 @@
+import { products } from "../data/products"
+import ProductCard from "../components/ProductCard"
+
 function Home() {
     return (
         <div>
-            <h1>Bienvenido a Quickshop</h1>
+            <h1 style={{ textAlign: 'center', margin: '20px 0' }}>Nuestros Productos</h1>
 
-            <p>Aquí verás nuestros productos.</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
+                {products.map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                ))}
+            </div>
         </div>
     )
 }
+
 export default Home
