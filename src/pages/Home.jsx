@@ -6,7 +6,7 @@ function Home() {
         <div>
             <h1 style={{ textAlign: 'center', margin: '20px 0' }}>Nuestros Productos</h1>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
+            <div className="products-grid">
                 {products.map((product) => (
                     <ProductCard key={product.id} product={product} />
                 ))}
